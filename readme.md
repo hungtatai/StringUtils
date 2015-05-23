@@ -92,3 +92,6 @@ see demo: [demo](https://github.com/HondaDai/StringUtils/tree/master/demo/custom
 
 We love contributions! If you'd like to contribute please submit a pull request.
 
+# License
+
+[License.md](https://github.com/HondaDai/StringUtils/blob/master/LICENSE.md)
