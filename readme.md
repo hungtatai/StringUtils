@@ -6,6 +6,22 @@ This library implements many commonly used but not natively supported function i
 
 `make test`
 
+```
+Passing: Split(s, delim, false)
+Passing: Split(s, delim, true)
+Passing: Join(res, delim, false)
+Passing: Join(res, delim, true)
+Passing: Compact(res)
+Passing: Trim(" hi ")
+Passing: Repeat("-", 5)
+Passing: ReplaceAll("monday morning", "mo", "kk")
+Passing: ToUpper("abcd")
+Passing: ToLower("ABCD")
+Passing: ReadFile("test_readfile.txt")
+Passing: WriteFile("test_writefile.txt", "abcde")
+Result: 12/12 Completed.
+```
+
 # Usage
 
 see example: [test.cpp](https://github.com/HondaDai/StringUtils/blob/master/test/main.cpp)
