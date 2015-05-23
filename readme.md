@@ -8,7 +8,7 @@ This library implements many commonly used but not natively supported function i
 
 # Usage
 
-see example: [test.cpp](https://github.com/HondaDai/StringUtils/blob/master/test/main.cpp#L45)
+see example: [test.cpp](https://github.com/HondaDai/StringUtils/blob/master/test/main.cpp)
 
 see source code: [string-utils.h](https://github.com/HondaDai/StringUtils/blob/master/string-utils.h)
 
