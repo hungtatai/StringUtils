@@ -4,6 +4,7 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
+#include <algorithm>
 
 #ifndef STRING_UTILS_H
 #define STRING_UTILS_H
@@ -85,11 +86,44 @@ static inline std::string Trim(const std::string &str){
   }
 }
 
-static inline std::string ReadFile(const std::string &filename) {
-  std::ifstream ifs(filename);
+static inline std::string Repeat(const std::string &str, unsigned int times){
+  std::stringstream ss;
+  for(int i=0; i<times; ++i) {
+    ss << str;
+  }
+  return ss.str();
+}
+
+static inline std::string ReplaceAll(const std::string &source, const std::string &target, const std::string &replacement){
+  return Join(Split(source, target, false), replacement, false);
+}
+
+static inline std::string ToUpper(const std::string &str){
+  std::string s(str);
+  std::transform(s.begin(), s.end(), s.begin(), toupper);
+  return s;
+}
+
+static inline std::string ToLower(const std::string &str){
+  std::string s(str);
+  std::transform(s.begin(), s.end(), s.begin(), tolower);
+  return s;
+}
+
+
+static inline std::string ReadFile(const std::string &filepath) {
+  std::ifstream ifs(filepath);
   std::string content( (std::istreambuf_iterator<char>(ifs) ),
                        (std::istreambuf_iterator<char>()    ) );
+  ifs.close();
   return content;
+}
+
+static inline void WriteFile(const std::string &filepath, const std::string &content) {
+  std::ofstream ofs(filepath);
+  ofs << content;
+  ofs.close();
+  return;
 }
 
 

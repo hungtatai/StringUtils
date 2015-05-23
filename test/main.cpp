@@ -1,7 +1,7 @@
 
 
 #include <iostream>
-#include "string-utils.h"
+#include "../string-utils.h"
 
 
 
@@ -78,15 +78,57 @@ int main (int argc, char *argv[]) {
     }
   }
 
-
   {
     if (eq(Trim("  hi"), "hi") && eq(Trim("hi  "), "hi") && eq(Trim("  hi  "), "hi") ) {
-      std::cout << "Passing: " << "Trim()" << std::endl;
+      std::cout << "Passing: " << "Trim(\" hi \")" << std::endl;
       pass_cases++;
     }
   }
 
-  std::cout << "Result: " << pass_cases << "/6" << " Completed." << std::endl;
+  {
+    if (eq(Repeat("-", 5), "-----")) {
+      std::cout << "Passing: " << "Repeat(\"-\", 5)" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  {
+    if (eq(ReplaceAll("monday morning", "mo", "kk"), "kknday kkrning")) {
+      std::cout << "Passing: " << "ReplaceAll(\"monday morning\", \"mo\", \"kk\")" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  {
+    if (eq(ToUpper("abcd"), "ABCD")) {
+      std::cout << "Passing: " << "ToUpper(\"abcd\")" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  {
+    if (eq(ToLower("ABCD"), "abcd")) {
+      std::cout << "Passing: " << "ToLower(\"ABCD\")" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  {
+    if (eq(ReadFile("test_readfile.txt"), "12345")) {
+      std::cout << "Passing: " << "ReadFile(\"test_readfile.txt\")" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  {
+    WriteFile("test_writefile.txt", "abcde");
+    if (eq(ReadFile("test_writefile.txt"), "abcde")) {
+      std::cout << "Passing: " << "WriteFile(\"test_writefile.txt\", \"abcde\")" << std::endl;
+      pass_cases++;
+    }
+  }
+
+  std::cout << "Result: " << pass_cases << "/12" << " Completed." << std::endl;
 
   return 0;
 }

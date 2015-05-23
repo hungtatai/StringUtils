@@ -1,7 +1,8 @@
 
-#.PHONY test
+.PHONY: test
 
 test:
-	@g++ main.cpp -o main
-	@./main
-	@rm main
+	@cd ./test && \
+	g++ main.cpp -o main && \
+	./main && \
+	rm main test_writefile.txt
