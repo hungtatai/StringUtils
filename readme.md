@@ -95,7 +95,7 @@ write string to file
 
 ```c++
 string content = "...";
-ReadFile(...file path..., content);
+WriteFile(...file path..., content);
 ```
 
 # Demo
