@@ -34,6 +34,12 @@ int main (int argc, char *argv[]) {
   std::cout << "program_name: " << conf.get("program_name") << std::endl;
   std::cout << "working_directory: " << conf.get("working_directory") << std::endl;
 
+  /*
+  output:
+  user_name: Honda
+  program_name: ls
+  working_directory: /home/honda
+  */
 
   return 0;
 }
