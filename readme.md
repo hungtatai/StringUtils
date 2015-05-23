@@ -81,6 +81,18 @@ v = Compact(v);
 // v: ["1", "2", "3"]
 ```
 
+## ToLower
+
+```c++
+string s = ToLower("ABCD"); // v: "abcd"
+```
+
+## ToUpper
+
+```c++
+string s = ToUpper("abcd"); // v: "ABCD"
+```
+
 ## ReadFile
 
 read file to string
