@@ -1,9 +1,5 @@
-
-
 #include <iostream>
 #include "../string-utils.h"
-
-
 
 bool eq(std::vector<std::string> v1, std::vector<std::string> v2) {
   if (v1.size() != v2.size()) {
