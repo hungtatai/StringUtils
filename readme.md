@@ -1,6 +1,6 @@
 # StringUtils
 
-This library implements many commonly used but not natively supported function in **std::string**, like `Split`, `Join`, `Trim`, `Compact`, `ReplaceAll`, `Repeat`, `ReadFile`, `WriteFile`, etc.
+This library implements many commonly used but not natively supported function in **std::string**, like `Split`, `Join`, `Trim`, `Compact`, `ReplaceAll`, `ToLower`, `ToUpper`, `Repeat`, `ReadFile`, `WriteFile`, etc.
 
 # Test
 
