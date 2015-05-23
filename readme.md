@@ -10,7 +10,10 @@ This library implements many commonly used but not natively supported function i
 
 see example: [test.cpp](https://github.com/HondaDai/StringUtils/blob/master/test/main.cpp#L45)
 
-see source: [string-utils.h](https://github.com/HondaDai/StringUtils/blob/master/string-utils.h)
+see source code: [string-utils.h](https://github.com/HondaDai/StringUtils/blob/master/string-utils.h)
+
+see demo: [demo](https://github.com/HondaDai/StringUtils/tree/master/demo/customize_configuration)
+
 
 ## Split
 
@@ -78,3 +81,14 @@ write string to file
 string content = "...";
 ReadFile(...file path..., content);
 ```
+
+# Demo
+
+build and run: `make demo`
+
+see demo: [demo](https://github.com/HondaDai/StringUtils/tree/master/demo/customize_configuration)
+
+# Contributing
+
+We love contributions! If you'd like to contribute please submit a pull request.
+
