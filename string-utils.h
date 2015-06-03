@@ -11,7 +11,7 @@
 static inline std::vector<std::string> Compact(const std::vector<std::string> &tokens){
   std::vector<std::string> compacted;
 
-  for(int i=0; i<tokens.size(); ++i) {
+  for(size_t i=0; i<tokens.size(); ++i) {
     if (!tokens[i].empty()) {
       compacted.push_back(tokens[i]);
     }
@@ -50,7 +50,7 @@ static inline std::string Join(const std::vector<std::string> &tokens, const std
     return Join(Compact(tokens), delim, false);
   } else {
     std::stringstream ss;
-    for(int i=0; i<tokens.size()-1; ++i) {
+    for(size_t i=0; i<tokens.size()-1; ++i) {
       ss << tokens[i] << delim;
     }
     ss << tokens[tokens.size()-1];
@@ -63,14 +63,14 @@ static inline std::string Trim(const std::string &str){
   
   std::string blank = "\r\n\t ";
   size_t begin = str.size(), end = 0;
-  for (int i=0; i<str.size(); ++i) {
+  for (size_t i=0; i<str.size(); ++i) {
     if ( blank.find(str[i]) == std::string::npos) {
       begin = i;
       break;
     }
   }
 
-  for (int i=str.size()-1; i>=0; --i) {
+  for (size_t i=str.size()-1; i>=0; --i) {
     if ( blank.find(str[i]) == std::string::npos) {
       end = i;
       break;
@@ -86,7 +86,7 @@ static inline std::string Trim(const std::string &str){
 
 static inline std::string Repeat(const std::string &str, unsigned int times){
   std::stringstream ss;
-  for(int i=0; i<times; ++i) {
+  for(unsigned int i=0; i<times; ++i) {
     ss << str;
   }
   return ss.str();
