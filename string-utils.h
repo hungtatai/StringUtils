@@ -110,7 +110,7 @@ static inline std::string ToLower(const std::string &str){
 
 
 static inline std::string ReadFile(const std::string &filepath) {
-  std::ifstream ifs(filepath);
+  std::ifstream ifs(filepath.c_str());
   std::string content( (std::istreambuf_iterator<char>(ifs) ),
                        (std::istreambuf_iterator<char>()    ) );
   ifs.close();
@@ -118,7 +118,7 @@ static inline std::string ReadFile(const std::string &filepath) {
 }
 
 static inline void WriteFile(const std::string &filepath, const std::string &content) {
-  std::ofstream ofs(filepath);
+  std::ofstream ofs(filepath.c_str());
   ofs << content;
   ofs.close();
   return;
