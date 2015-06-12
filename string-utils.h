@@ -70,8 +70,8 @@ static inline std::string Trim(const std::string &str){
     }
   }
 
-  for (size_t i=str.size()-1; i>=0; --i) {
-    if ( blank.find(str[i]) == std::string::npos) {
+  for (size_t i=str.size(); i>0; --i) {
+    if ( blank.find(str[i-1]) == std::string::npos) {
       end = i;
       break;
     }
