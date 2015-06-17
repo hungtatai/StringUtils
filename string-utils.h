@@ -72,7 +72,7 @@ static inline std::string Trim(const std::string &str){
 
   for (size_t i=str.size(); i>0; --i) {
     if ( blank.find(str[i-1]) == std::string::npos) {
-      end = i;
+      end = i-1;
       break;
     }
   }
